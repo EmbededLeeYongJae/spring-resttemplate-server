@@ -17,7 +17,7 @@ public class ItemController {
     }
 
     @GetMapping("/get-call-obj")
-    public Item getCallObject(@RequestParam String query) {
+    public Item getCallObject(@RequestParam(value = "query") String query) {
         return itemService.getCallObject(query);
     }
 
